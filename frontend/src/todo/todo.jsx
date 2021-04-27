@@ -5,7 +5,7 @@ import PageHeader from '../template/pageHeader'
 import TodoForm from './todoForm'
 import TodoList from './todoList'
 
-const URL = 'http://localhost:3009/api/todos'
+const URL = 'http://localhost:3003/api/todos'
 
 export default class Todo extends Component {
 
@@ -83,7 +83,7 @@ export default class Todo extends Component {
 
                 />
 
-                <TodoList list={this.state.list}
+                <TodoList
                     handleRemove={this.handleRemove}
                     handleMarkAsDone={this.handleMarkAsDone}
                     handleMarkAsPending={this.handleMarkAsPending} />

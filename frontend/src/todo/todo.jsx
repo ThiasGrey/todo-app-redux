@@ -1,13 +1,21 @@
-import React, { Component } from 'react'
-import axios from 'axios'
+import React/* , { Component } */ from 'react'
+/* import axios from 'axios' */
 
 import PageHeader from '../template/pageHeader'
 import TodoForm from './todoForm'
 import TodoList from './todoList'
 
-const URL = 'http://localhost:3003/api/todos'
+/* const URL = 'http://localhost:3003/api/todos' */
 
-export default class Todo extends Component {
+export default props => (
+    <div>
+        <PageHeader name="Tarefas" small='Cadastro'></PageHeader>
+        <TodoForm/>
+        <TodoList />
+    </div>
+)
+
+/* export default class Todo extends Component {
 
     constructor(props) {
         super(props)
@@ -34,7 +42,7 @@ export default class Todo extends Component {
             .then(resp => this.setState({ ...this.state, description, list: resp.data }))
     }
 
-    handleSearch(){ 
+    handleSearch(){
         this.refresh(this.state.description)
     }
 
@@ -90,4 +98,4 @@ export default class Todo extends Component {
             </div>
         )
     }
-}
+} */
